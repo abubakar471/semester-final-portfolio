@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <section class="hero">
+    <section class="hero" id="home">
         <header class="header">
             <nav class="navbar container">
                 <a href="/" class="logo">
@@ -33,25 +33,25 @@
                 </a>
 
                 <ul class="nav-links">
-                    <a href="#">
+                    <a href="#home">
                         <li class="nav-item">
                             Home
                         </li>
                     </a>
 
-                    <a href="#">
+                    <a href="#projects">
                         <li class="nav-item">
                             Projects
                         </li>
                     </a>
 
-                    <a href="#">
+                    <a href="#about">
                         <li class="nav-item">
                             About
                         </li>
                     </a>
 
-                    <a href="#">
+                    <a href="#contact">
                         <li class="nav-item">
                             Contact
                         </li>
@@ -84,8 +84,8 @@
                 </h1>
 
                 <div class="hero-btns">
-                    <a href="#" class="hero-btn-1">View Works</a>
-                    <a href="#" class="hero-btn-2">Let's Talk</a>
+                    <a href="#projects" class="hero-btn-1">View Works</a>
+                    <a href="#contact" class="hero-btn-2">Let's Talk</a>
                 </div>
             </div>
 
@@ -102,7 +102,7 @@
     </section>
 
     <!-- about section -->
-    <section class="about-outer-container">
+    <section class="about-outer-container" id="about">
         <div class="about-container">
             <!-- Decorative blobs -->
             <div class="blob blob-1"></div>
@@ -153,7 +153,7 @@
         </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="container heading-container">
             <div>
                 <h1 class="projects-subheading">
@@ -271,7 +271,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="container">
             <div class="skills-heading-container">
                 <h2 class="skills-heading">Technical <span>Arsenal</span></h2>
@@ -329,7 +329,7 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container contact-container">
             <div class="contact-content">
                 <h2 class="contact-heading">Ready to initiate
@@ -385,22 +385,22 @@
             </div>
 
             <div class="footer-links">
-                <a href="/" class="footer-link">
+                <a href="#home" class="footer-link">
                     Home
                 </a>
-                <a href="/" class="footer-link">
+                <a href="#about" class="footer-link">
                     About
                 </a>
-                <a href="/" class="footer-link">
+                <a href="#projects" class="footer-link">
                     Projects
                 </a>
-                <a href="/" class="footer-link">
+                <a href="#contact" class="footer-link">
                     Contact
                 </a>
             </div>
         </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./animation.js"></script>
 </body>
 
 </html>
