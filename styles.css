@@ -223,6 +223,8 @@ html, body {
 
 .about-container-inner {
     gap: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .about-img-container {
@@ -294,6 +296,95 @@ html, body {
     font-size: 2.5rem;
     font-weight: bolder;
     font-style: italic;
+}
+
+/* Decorative blobs for about section */
+.about-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    background: rgba(186, 254, 0, 0.25);
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+.blob-1 {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -100px;
+    animation: blob-animation-1 8s ease-in-out infinite;
+}
+
+.blob-2 {
+    width: 250px;
+    height: 250px;
+    bottom: 10%;
+    right: 5%;
+    animation: blob-animation-2 10s ease-in-out infinite;
+}
+
+.blob-3 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    right: -50px;
+    animation: blob-animation-3 9s ease-in-out infinite;
+}
+
+@keyframes blob-animation-1 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    }
+    25% {
+        transform: translate(30px, -50px) scale(1.1);
+        border-radius: 70% 30% 66% 34% / 33% 66% 34% 67%;
+    }
+    50% {
+        transform: translate(-20px, 20px) scale(0.9);
+        border-radius: 100% 60% 52% 37% / 57% 73% 27% 40%;
+    }
+    75% {
+        transform: translate(50px, 50px) scale(1.05);
+        border-radius: 50% 50% 35% 65% / 60% 30% 70% 40%;
+    }
+}
+
+@keyframes blob-animation-2 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    33% {
+        transform: translate(-40px, 40px) scale(1.1);
+        border-radius: 30% 60% 70% 40% / 50% 50% 30% 60%;
+    }
+    66% {
+        transform: translate(30px, -30px) scale(0.95);
+        border-radius: 70% 30% 40% 60% / 40% 60% 50% 30%;
+    }
+}
+
+@keyframes blob-animation-3 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        border-radius: 50% 50% 60% 40% / 40% 60% 30% 70%;
+    }
+    40% {
+        transform: translate(-50px, -30px) scale(1.08);
+        border-radius: 60% 40% 50% 50% / 50% 40% 60% 40%;
+    }
+    80% {
+        transform: translate(40px, 50px) scale(0.92);
+        border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
+    }
 }
 
 /* projects section */
