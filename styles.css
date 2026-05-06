@@ -3,10 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     border: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
     font-family: fantasy;
     scroll-behavior: smooth;
+}
+
+/* prevent horizontal page overflow only on root elements */
+html, body {
+    overflow-x: hidden;
 }
 
 .header {
@@ -73,6 +76,9 @@
     width: 100%;
     background-blend-mode: darken;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -175,12 +181,10 @@
 }
 
 .hero-bottom {
-    margin-top: 30px;
     background: linear-gradient(0deg, #bafe0009 0%, rgba(0, 0, 0, 0) 100%) no-repeat;
     width: 100%;
     min-height: 100px;
-    position: absolute;
-    bottom: 0;
+    bottom: 0 !important;
     left: 0;
     right: 0;
     opacity: 1;
@@ -660,6 +664,35 @@
     font-family: Arial, Helvetica, sans-serif !important;
     font-size: medium;
     text-decoration: none;
+}
+
+/* Lightweight Animate-On-Scroll CSS (non-invasive) */
+.aos-item {
+    --aos-duration: 800ms; /* default duration, can be overridden per element */
+    opacity: 0;
+    transform: translateY(8px) translateX(0) scale(0.995);
+    transition: opacity var(--aos-duration) cubic-bezier(.2,.8,.2,1), transform var(--aos-duration) cubic-bezier(.2,.8,.2,1);
+    transition-delay: var(--aos-delay, 0ms);
+    will-change: opacity, transform;
+}
+.aos-item.aos-animate {
+    opacity: 1;
+    transform: none;
+}
+
+/* specific entry directions */
+.aos-from-top { transform: translateY(-18px); }
+.aos-from-top.aos-animate { transform: none; }
+
+.aos-left { transform: translateX(-22px); }
+.aos-left.aos-animate { transform: none; }
+
+.aos-right { transform: translateX(22px); }
+.aos-right.aos-animate { transform: none; }
+
+/* small accessibility preference respect: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .aos-item { transition: none !important; transform: none !important; opacity: 1 !important; }
 }
 
 @media screen and (max-width: 1280px) {
