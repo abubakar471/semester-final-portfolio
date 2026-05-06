@@ -183,7 +183,7 @@ html, body {
 .hero-bottom {
     background: linear-gradient(0deg, #bafe0009 0%, rgba(0, 0, 0, 0) 100%) no-repeat;
     width: 100%;
-    min-height: 200px;
+    min-height: 100px;
     bottom: 0 !important;
     left: 0;
     right: 0;
