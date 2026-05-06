@@ -741,10 +741,14 @@ html, body {
     }
 
     .heading-container {
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
         gap: 20px;
+    }
+
+    .heading-container h2{
+        width: 100%;
     }
 
     .projects-subheading {
@@ -753,7 +757,7 @@ html, body {
         width: 100%;
     }
 
-    .featured-projects-heading {
+    .featured-projects-heading p{
         font-size: 2rem;
     }
 
@@ -830,6 +834,17 @@ html, body {
 
     .about-content {
         width: 100%;
+    }
+
+
+    .featured-projects-heading{
+        width: 100% !important;
+    }
+
+    .project-heading-desc>p {
+        text-align: left;
+        max-width: 50%;
+        margin-left: auto;
     }
 
     .projects-cards {
@@ -1024,6 +1039,7 @@ html, body {
 
     .heading-container {
         flex-direction: column;
+        align-items: start;
         gap: 20px;
     }
 
