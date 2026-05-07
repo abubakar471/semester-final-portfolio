@@ -1266,7 +1266,7 @@ html, body {
 
     .footer-links {
         flex-direction: row;
-        align-items: end !important;
+        align-items: start !important;
         flex-wrap: wrap;
         gap: 10px;
         width: 100%;
@@ -1366,7 +1366,7 @@ html, body {
     .hero-btn-1,
     .hero-btn-2 {
         font-size: medium;
-        padding: 8px 15px;
+        padding: 8px 5px !important;
         width: 160px;
         text-align: center;
     }
@@ -1650,11 +1650,12 @@ html, body {
     }
 
     .footer-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 8px;
         width: 100%;
         align-items: start;
         justify-content: start !important;
+        flex-wrap: wrap;
     }
 
     .footer-links .footer-link {
